@@ -159,20 +159,10 @@ section{padding:7rem 3rem}
 .step .n{font-family:'Marcellus',serif;color:var(--steel);font-size:.85rem;letter-spacing:.2em;display:block;margin-bottom:1.1rem}
 
 /* ---------- contact ---------- */
-.contact .shell{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
-.contact p.lead{color:var(--steel);max-width:26rem;margin-top:1rem}
-form{display:grid;gap:1.6rem}
-.field{display:grid;gap:.5rem}
-.field label{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:var(--steel)}
-.field input,.field select,.field textarea{
-  background:transparent;border:0;border-bottom:1px solid var(--line);
-  padding:.7rem 0;color:var(--bright);font-family:'Jost',sans-serif;font-size:1rem;font-weight:300;
-  transition:border-color .3s;border-radius:0;
-}
-.field select{appearance:none}
-.field select option{background:var(--coal)}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-bottom-color:var(--bright)}
-form .btn{justify-self:start;margin-top:.6rem}
+.contact .shell{text-align:center;display:flex;flex-direction:column;align-items:center}
+.contact p.lead{color:var(--steel);max-width:30rem;margin:1rem auto 0}
+.contact-links{display:flex;gap:1.2rem;flex-wrap:wrap;justify-content:center;margin-top:2.8rem}
+.contact-links .btn{min-width:220px}
 
 /* ---------- footer ---------- */
 footer{border-top:1px solid var(--line);padding:3.4rem 3rem;text-align:center}
@@ -187,7 +177,6 @@ footer small{display:block;margin-top:1.2rem;font-size:.68rem;letter-spacing:.24
   .gallery-grid{grid-template-columns:1fr;gap:1rem}
   .g-1,.g-2,.g-3,.g-4,.g-5{grid-column:span 1;height:300px}
   .steps{grid-template-columns:1fr 1fr;gap:2rem}
-  .contact .shell{grid-template-columns:1fr;gap:3rem}
 }
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -299,25 +288,19 @@ footer small{display:block;margin-top:1.2rem;font-size:.68rem;letter-spacing:.24
 
 <section class="contact" id="contact">
   <div class="shell">
-    <div>
-      <div class="eyebrow reveal">Consultation</div>
-      <h2 class="section-title reveal">Tell us about your project</h2>
-      <p class="lead reveal">Every remodel starts with a conversation and a tape measure. Send us the basics and we&rsquo;ll set up a free in-home consultation.</p>
+    <div class="eyebrow reveal">Consultation</div>
+    <h2 class="section-title reveal">Tell us about your project</h2>
+    <p class="lead reveal">Every remodel starts with a conversation and a tape measure. Call or email us and we&rsquo;ll set up a free in-home consultation.</p>
+    <div class="contact-links reveal">
+      <a class="btn" href="tel:+17324982358">Call (732) 498-2358</a>
+      <a class="btn ghost" href="mailto:info@timelessspacesllc.com">info@timelessspacesllc.com</a>
     </div>
-    <form class="reveal" onsubmit="event.preventDefault();this.innerHTML='<p style=\'font-family:Marcellus,serif;font-size:1.3rem;color:#eceded\'>Thank you — we&rsquo;ll be in touch shortly.</p>'">
-      <div class="field"><label for="f-name">Name</label><input id="f-name" type="text" autocomplete="name" required></div>
-      <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" autocomplete="tel" required></div>
-      <div class="field"><label for="f-type">Project Type</label>
-        <select id="f-type"><option>Kitchen</option><option>Bathroom</option><option>Full Remodel</option><option>Not sure yet</option></select>
-      </div>
-      <div class="field"><label for="f-msg">Tell us more</label><textarea id="f-msg" rows="3"></textarea></div>
-      <button class="btn" type="submit">Request Consultation</button>
-    </form>
   </div>
 </section>
 
 <footer>
   <img src="assets/logo.jpg" alt="Timeless Spaces LLC — Kitchens, Bathrooms, Remodels">
+  <small><a href="tel:+17324982358">(732) 498-2358</a> &nbsp;·&nbsp; <a href="mailto:info@timelessspacesllc.com">info@timelessspacesllc.com</a></small>
   <small>Licensed &amp; Insured — © 2026</small>
 </footer>
 
