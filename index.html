@@ -51,6 +51,9 @@ nav.scrolled{background:rgba(10,10,11,.95);border-bottom:1px solid var(--line)}
 .nav-links{display:flex;gap:2.4rem}
 .nav-links a{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--steel);transition:color .3s}
 .nav-links a:hover{color:var(--bright)}
+.nav-contact{display:flex;flex-direction:column;align-items:flex-end;gap:.2rem;font-size:.66rem;letter-spacing:.06em;color:var(--steel);text-align:right}
+.nav-contact a{color:var(--steel);transition:color .3s}
+.nav-contact a:hover{color:var(--bright)}
 
 /* ---------- hero ---------- */
 .hero{
@@ -171,6 +174,9 @@ footer{border-top:1px solid var(--line);padding:3.4rem 3rem;text-align:center}
 footer img{width:210px;margin:0 auto 1.6rem;opacity:.95}
 footer small{display:block;margin-top:1.2rem;font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--steel)}
 
+@media (max-width:1150px){
+  .nav-contact{display:none}
+}
 @media (max-width:900px){
   nav{padding:1rem 1.4rem}
   .nav-links{display:none}
@@ -194,6 +200,10 @@ footer small{display:block;margin-top:1.2rem;font-size:.68rem;letter-spacing:.24
     <img src="assets/emblem.jpg" alt="">
     <span>Timeless Spaces</span>
   </a>
+  <div class="nav-contact">
+    <span>975 Burnt Tavern Rd, Brick Township, NJ 08724</span>
+    <span><a href="tel:+17324982358">(732) 498-2358</a> &nbsp;·&nbsp; <a href="mailto:info@timelessspacesllc.com">info@timelessspacesllc.com</a></span>
+  </div>
   <div class="nav-links">
     <a href="#services">Services</a>
     <a href="#work">Work</a>
